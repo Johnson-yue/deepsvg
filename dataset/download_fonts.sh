@@ -6,7 +6,10 @@ function gdrive_download () {
   rm -rf /tmp/cookies.txt
 }
 
-echo "Downloading pretrained models..."
-gdrive_download 1tsVx_cnFunSf5vvPWPVTjZ84IQC2pIDm hierarchical_ordered.pth.tar
-gdrive_download 11KBUWfexw3LDvSFOVxy072_VCFYKm3L- hierarchical_ordered_fonts.pth.tar
+echo "Downloading dataset..."
+gdrive_download 1PEukDlZ6IkEhh9XfTTMMtFOwdXOC3iKn fonts_meta.csv
+gdrive_download 15xPf2FrXaHZ0bf6htZzc9ORTMGHYz9DX fonts_tensor.zip
+
+echo "Download done. Unzipping..."
+unzip fonts_tensor.zip
 echo "Done."
